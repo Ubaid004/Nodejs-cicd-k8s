@@ -1,8 +1,0 @@
-version: '3.3'
-
-
-services:
-        web :
-                image : 'nodejs-todo-cicd'
-                ports :
-                        - "8000:8000"
