@@ -1,1 +1,42 @@
 
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: nodejs-todo
+
+  labels:
+
+    app: nodejs-todo
+
+spec:
+
+  replicas: 3
+
+  selector:
+
+    matchLabels:
+
+      app: nodejs-todo
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: nodejs-todo
+
+    spec:
+
+      containers:
+
+      - name: nodejs-todo
+
+        image: nodejs-todo-cicd
+
+        ports:
+
+        - containerPort: 80
